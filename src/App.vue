@@ -89,7 +89,7 @@ const level = ref("");
 const opened = reactive({});
 
 onMounted(async () => {
-  const r = await fetch("/questions.json");
+  const r = await fetch(`${import.meta.env.BASE_URL}questions.json`);
   all.value = await r.json();
 });
 
